@@ -6,7 +6,7 @@ from Biblioteca.Consultas.mostrar import *
 from Biblioteca.Consultas.contar import *
 from Biblioteca.Utilidades.limpiarConsola import *
 
-
+#Joshua Ponce #1 Proyecto en github
 bandera = True
 while bandera == True:
     limpiar_Consola()
