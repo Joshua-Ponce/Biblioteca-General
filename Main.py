@@ -5,14 +5,28 @@ from Biblioteca.Consultas.buscar import *
 from Biblioteca.Consultas.mostrar import *
 from Biblioteca.Consultas.contar import *
 from Biblioteca.Utilidades.limpiarConsola import *
+from Biblioteca.Utilidades.mostrarMenu import *
 
 #Joshua Ponce #1 Proyecto en github
 bandera = True
 while bandera == True:
     limpiar_Consola()
-    print("==== BIBLIOTECA - JOSHUA PONCE ====")
-    opcionPrincipal = int(input("1. Agregar libro\n2. Buscar libro\n3. Mostrar libros\n4. Modificar libro\n5. Eliminar libro\n6. Contar libros\n7. Salir\nDigite el # de ópcion:  "))
-    match opcionPrincipal:
+    mostrar_Menu()
+    while True:
+        try:
+          opcion = int(input("Digite una opción (1-7):  "))
+          if opcion < 1 or opcion > 7:
+              limpiar_Consola()
+              mostrar_Menu()
+              print("\n[ALERTA] Opción fuera de rango.")
+              continue
+          break
+        except ValueError:
+            limpiar_Consola()
+            mostrar_Menu()
+            print("\n[ALERTA] Válido solamente números.")
+     
+    match opcion:
         case 1:
             limpiar_Consola()
             agregar_libro()
