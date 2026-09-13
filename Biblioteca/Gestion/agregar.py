@@ -1,12 +1,20 @@
 from Biblioteca.Datos.inventario import libros_general
-from Biblioteca.Utilidades.limpiarConsola import continuar_Consola
+from Biblioteca.Utilidades.limpiarConsola import continuar_Consola,limpiar_Consola
 def agregar_libro():
-    agregarLibro = input("Digite el código del libro que desea agregar: ")
-    libros_general[agregarLibro] = {}
-    agregarNombre = input(f"Digite el título (#{agregarLibro}): ")
-    libros_general[agregarLibro]["Titulo"] = agregarNombre
-    agregarAutor = input("Digite el nombre del Autor: ")
-    libros_general[agregarLibro]["Autor"] = agregarAutor
-    continuar_Consola()
+    while True:
+        limpiar_Consola()
+        agregarLibro = input("Digite el código del libro que desea agregar: ")
+        if agregarLibro not in libros_general:
+            libros_general[agregarLibro] = {}
+            agregarNombre = input(f"Digite el título (#{agregarLibro}): ")
+            libros_general[agregarLibro]["Titulo"] = agregarNombre
+            agregarAutor = input("Digite el nombre del Autor: ")
+            libros_general[agregarLibro]["Autor"] = agregarAutor
+            continuar_Consola()
+            break
+        else:
+            input("\nCódigo ya existente... Enter para continuar")
+        
+    
 
     
