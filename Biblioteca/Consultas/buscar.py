@@ -1,5 +1,5 @@
 from Biblioteca.Datos.inventario import libros_general
-from Biblioteca.Utilidades.limpiarConsola import limpiar_Consola,continuar_Consola
+from Biblioteca.Utilidades.limpiarConsola import *
 from Biblioteca.Utilidades.manejoErrores import *
 def buscar_libro():
     while True:

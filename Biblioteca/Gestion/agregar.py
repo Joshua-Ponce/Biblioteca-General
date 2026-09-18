@@ -1,5 +1,5 @@
-from Biblioteca.Datos.inventario import libros_general
-from Biblioteca.Utilidades.limpiarConsola import continuar_Consola,limpiar_Consola
+from Biblioteca.Datos.inventario import *
+from Biblioteca.Utilidades.limpiarConsola import *
 def agregar_libro():
     while True:
         limpiar_Consola()

@@ -1,4 +1,4 @@
-from Biblioteca.Datos.inventario import libros_general
+from Biblioteca.Datos.inventario import *
 from Biblioteca.Utilidades.limpiarConsola import *
 from Biblioteca.Utilidades.manejoErrores import *
 from Biblioteca.Utilidades.mostrarMenu import mostrar_Submenu

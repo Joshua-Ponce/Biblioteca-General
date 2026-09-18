@@ -1,4 +1,4 @@
-from Biblioteca.Datos.inventario import libros_general
+from Biblioteca.Datos.inventario import *
 from Biblioteca.Utilidades.limpiarConsola import *
 #1 Ningun libro en la biblioteca aún
 def sin_Libro():
