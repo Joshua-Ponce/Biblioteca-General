@@ -8,11 +8,14 @@ def buscar_libro():
             break
         else:
             buscarLibro = input("Digite el código del libro a buscar: ")
-            if buscarLibro in libros_general:
-                limpiar_Consola()
-                print(f"Código: [{buscarLibro}]\nTítulo: {libros_general[buscarLibro]["Titulo"]}\nAutor: {libros_general[buscarLibro]["Autor"]}")
-                continuar_Consola()
-                break
+            if sin_Valor(buscarLibro):
+                continue
             else:
-                input("\nCódigo no existente... Enter para continuar")
+                if buscarLibro in libros_general:
+                    limpiar_Consola()
+                    print(f"Código: [{buscarLibro}]\nTítulo: {libros_general[buscarLibro]["Titulo"]}\nAutor: {libros_general[buscarLibro]["Autor"]}")
+                    continuar_Consola()
+                    break
+                else:
+                    input("\nCódigo no existente... Enter para continuar")
             
