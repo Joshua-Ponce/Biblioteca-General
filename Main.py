@@ -14,7 +14,7 @@ while bandera == True:
     mostrar_Menu()
     while True:
         try:
-          opcion = int(input("Digite una opción (1-7):  "))
+          opcion = int(input("Digite una opción (1-7): "))
           if opcion < 1 or opcion > 7:
               limpiar_Consola()
               mostrar_Menu()
