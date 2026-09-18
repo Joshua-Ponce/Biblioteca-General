@@ -8,3 +8,11 @@ def sin_Libro():
         return True
     else:
         return False
+#2 Usuario no ingresa ningun valor
+def sin_Valor(validacion):
+    if validacion == "":
+        limpiar_Consola()
+        input("[ADVERTENCIA] NO HAY VALOR INGRESADO... ENTER PARA CONTINUAR\n")
+        return True
+    else:
+        return False
