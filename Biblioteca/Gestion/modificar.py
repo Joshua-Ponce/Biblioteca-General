@@ -26,52 +26,59 @@ def modificar_libro():
                 while True:
                     limpiar_Consola()
                     modificarLibro = input("Digite el código del libro a modificar: ")
-                    if modificarLibro in libros_general:
+                    if validar_Noexistente(modificarLibro):
+                        continue
+                    while True:
+                        limpiar_Consola()
                         nuevoCodigo = input("Digite el nuevo código: ")
+                        if validar_codigo(nuevoCodigo):
+                            continue
                         libros_general[nuevoCodigo] = libros_general[modificarLibro]
                         del libros_general[modificarLibro]
                         continuar_Consola()
                         break
-                    else:
-                        input("\nCódigo no existente... Enter para continuar")         
+                    break
+                       
             case 2:
                 while True:
                     limpiar_Consola()
                     modificarLibro = input("Digite el código del libro a modificar: ")
-                    if modificarLibro in libros_general:
-                        nuevoTitulo = input("Digite el nuevo título: ")
-                        libros_general[modificarLibro]["Titulo"] = nuevoTitulo
-                        continuar_Consola()
-                        break
-                    else:
-                        input("\nCódigo no existente... Enter para continuar")
+                    if validar_Noexistente(modificarLibro):
+                        continue
+                    nuevoTitulo = input("Digite el nuevo título: ")
+                    libros_general[modificarLibro]["Titulo"] = nuevoTitulo
+                    continuar_Consola()
+                    break
             case 3:
                 while True:
                     limpiar_Consola()
                     modificarLibro = input("Digite el código del libro a modificar: ")
-                    if modificarLibro in libros_general:
-                        nuevoAutor = input("Digite el nuevo autor: ")
-                        libros_general[modificarLibro]["Autor"] = nuevoAutor
-                        continuar_Consola()
-                        break
-                    else:
-                        input("\nCódigo no existente... Enter para continuar")
+                    if validar_Noexistente(modificarLibro):
+                        continue
+                    nuevoAutor = input("Digite el nuevo autor: ")
+                    libros_general[modificarLibro]["Autor"] = nuevoAutor
+                    continuar_Consola()
+                    break
             case 4:
                 while True:
                     limpiar_Consola()
                     modificarLibro = input("Digite el código del libro a modificar: ")
-                    if modificarLibro in libros_general:
-                        nuevoCodigo = input("Digite el nuevo código: ")
-                        nuevoTitulo = input("Digite el nuevo título: ")
-                        nuevoAutor = input("Digite el nuevo autor: ")
-                        libros_general[modificarLibro]["Titulo"] = nuevoTitulo
-                        libros_general[modificarLibro]["Autor"] = nuevoAutor
-                        libros_general[nuevoCodigo] = libros_general[modificarLibro]
-                        del libros_general[modificarLibro]
-                        continuar_Consola()
-                        break
-                    else:
-                        input("\nCódigo no existente... Enter para continuar")
+                    if validar_Noexistente(modificarLibro):
+                        continue
+                    while True:
+                     limpiar_Consola()
+                     nuevoCodigo = input("Digite el nuevo código: ")
+                     if validar_codigo(nuevoCodigo):
+                         continue
+                     break
+                    nuevoTitulo = input("Digite el nuevo título: ")
+                    nuevoAutor = input("Digite el nuevo autor: ")
+                    libros_general[modificarLibro]["Titulo"] = nuevoTitulo
+                    libros_general[modificarLibro]["Autor"] = nuevoAutor
+                    libros_general[nuevoCodigo] = libros_general[modificarLibro]
+                    del libros_general[modificarLibro]
+                    continuar_Consola()
+                    break
             case 5:
                 break        
             

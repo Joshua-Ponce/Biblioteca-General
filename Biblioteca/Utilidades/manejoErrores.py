@@ -16,3 +16,20 @@ def sin_Valor(validacion):
         return True
     else:
         return False
+
+def validar_codigo(validacion):
+    for codigo in libros_general:
+        if validacion == codigo:
+            limpiar_Consola()
+            input("[ADVERTENCIA] CÓDIGO YA EXISTENTE... ENTER PARA CONTINUAR\n")
+            return True
+        else:
+            return False
+        
+def validar_Noexistente(validacion):
+    if validacion not in libros_general:
+        limpiar_Consola()
+        input("[ADVERTENCIA] CÓDIGO NO EXISTENTE... ENTER PARA CONTINUAR\n")
+        return True
+    else:
+        return False
